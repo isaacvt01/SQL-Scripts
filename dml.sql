@@ -6,7 +6,7 @@ INSERT INTO stores (store_name, city) VALUES
 ('Alcudia Bikes', 'Alcudia');
 
 -- Insert data in Bikes table
-INSERT INTO bikes (bike_name, store_id, usage, brand) VALUES
+INSERT INTO bikes (bike_name, store_id, `usage`, brand) VALUES
 ('Bike 1', 1, 'mountain', 'ORBEA'),
 ('Bike 2', 1, 'mountain', 'CANYON'),
 ('Bike 3', 2, 'racing', 'BMC'),
