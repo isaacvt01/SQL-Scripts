@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS bikes (
   bike_id INT(20) NOT NULL AUTO_INCREMENT,
   bike_name VARCHAR(50) NOT NULL,
   store_id INT(5) NOT NULL,
-  usage VARCHAR(30) NOT NULL CHECK (usage IN ('urban', 'mountain', 'racing')),
+  `usage` ENUM('urban', 'mountain', 'racing') NOT NULL,
   brand VARCHAR(30) NOT NULL,
   PRIMARY KEY (bike_id),
   FOREIGN KEY (store_id) REFERENCES stores(store_id)
