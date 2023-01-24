@@ -35,24 +35,25 @@ CREATE TABLE IF NOT EXISTS shipments (
   FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
-    Se utilizó IF NOT EXISTS para evitar crear la tabla si ya existe.
-    La columna "usage" de la tabla "bikes" se utilizó CHECK para asegurar que solo se inserten valores permitidos ('urban', 'mountain', 'racing')
-    Se utilizó UNIQUE KEY en la columna "store_name" de la tabla "stores" para asegurar que no se repita el mismo nombre de tienda.
-    Se utilizó AUTO_INCREMENT en las columnas de las clave primarias para que el valor de las mismas sea incrementado automáticamente al insertar una nueva fila.
+   -- IF NOT EXISTS was used to avoid creating the table if it already exists.
+   -- CHECK was used in the "usage" column of the "bikes" table to ensure that only allowed values ('urban', 'mountain', 'racing') are inserted.
+   -- UNIQUE KEY was used in the "store_name" column of the "stores" table to ensure that the same shop name is not repeated.
+   -- AUTO_INCREMENT was used in the primary key columns so that the value of the primary key is automatically incremented when a new row is inserted.
+
 
 -- Insertar datos en tabla Stores
 INSERT INTO stores (store_name, city) VALUES
-('Bike Shop 1', 'New York'),
-('Bike Shop 2', 'Los Angeles'),
-('Bike Shop 3', 'Chicago');
+('PalmaBike', 'Palma'),
+('Jaume Bikes', 'IES Manacor'),
+('Alcudia Bikes', 'Alcudia');
 
 -- Insertar datos en tabla Bikes
 INSERT INTO bikes (bike_name, store_id, usage, brand) VALUES
-('Mountain Bike 1', 1, 'mountain', 'Brand A'),
-('Mountain Bike 2', 1, 'mountain', 'Brand B'),
-('Racing Bike 1', 2, 'racing', 'Brand C'),
-('Urban Bike 1', 3, 'urban', 'Brand D'),
-('Urban Bike 2', 3, 'urban', 'Brand E');
+('Bike 1', 1, 'mountain', 'ORBEA'),
+('Bike 2', 1, 'mountain', 'CANYON'),
+('Bike 3', 2, 'racing', 'BMC'),
+('Bike 4', 3, 'urban', 'TRECK'),
+('Bike 5', 3, 'urban', 'ORBEA');
 
 -- Insertar datos en tabla Orders
 INSERT INTO orders (bike_id, order_date) VALUES
