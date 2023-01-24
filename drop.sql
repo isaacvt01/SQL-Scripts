@@ -1,15 +1,19 @@
+
+-- With this command we deactivate the foreigns keys revision so that it does not give us an error.
 SET FOREIGN_KEY_CHECKS = 0;
 
--- Borrar tabla Shipments
+-- Delete Shipments table
 DROP TABLE IF EXISTS shipments;
 
--- Borrar tabla Orders
+-- Delete Orders table
 DROP TABLE IF EXISTS orders;
 
--- Borrar tabla Stores
+-- Delete Stores table
 DROP TABLE IF EXISTS stores;
 
--- Borrar tabla Bikes
+-- Delete Bikes table
 DROP TABLE IF EXISTS bikes;
 
+
+-- We activate it again when we finish deleting 
 SET FOREIGN_KEY_CHECKS = 1;
