@@ -11,7 +11,7 @@
 #### 4. Now we create the table bikes.
 ![create_database](img/create_bikes.png)
 
-#### 5. #### 3. Next step is to insert data on the table bikes.
+#### 5. Next step is to insert data on the table bikes.
 ![create_database](img/insert_data_bikes.png)
 
 #### 6. Here we are gonna combain the creation of the table orders and to insert data on it.
