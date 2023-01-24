@@ -39,3 +39,5 @@ CREATE TABLE IF NOT EXISTS shipments (
    -- CHECK was used in the "usage" column of the "bikes" table to ensure that only allowed values ('urban', 'mountain', 'racing') are inserted.
    -- UNIQUE KEY was used in the "store_name" column of the "stores" table to ensure that the same shop name is not repeated.
    -- AUTO_INCREMENT was used in the primary key columns so that the value of the primary key is automatically incremented when a new row is inserted.
+   
+   
