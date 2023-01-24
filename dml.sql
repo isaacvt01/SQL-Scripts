@@ -1,4 +1,4 @@
--- Crear tabla Bikes
+-- Create Bikes table
 CREATE TABLE IF NOT EXISTS bikes (
   bike_id INT(20) NOT NULL AUTO_INCREMENT,
   bike_name VARCHAR(50) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS bikes (
   FOREIGN KEY (store_id) REFERENCES stores(store_id)
 );
 
--- Crear tabla Stores
+-- Create Stores table
 CREATE TABLE IF NOT EXISTS stores (
   store_id INT(5) NOT NULL AUTO_INCREMENT,
   store_name VARCHAR(50) NOT NULL UNIQUE KEY,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS stores (
   PRIMARY KEY (store_id)
 );
 
--- Crear tabla Orders
+-- Create Orders table
 CREATE TABLE IF NOT EXISTS orders (
   order_id INT(10) NOT NULL AUTO_INCREMENT,
   bike_id INT(20) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS orders (
   FOREIGN KEY (bike_id) REFERENCES bikes(bike_id)
 );
 
--- Crear tabla Shipments
+-- Create Shipments table
 CREATE TABLE IF NOT EXISTS shipments (
   shipment_id INT(10) NOT NULL AUTO_INCREMENT,
   order_id INT(10) NOT NULL,
@@ -41,13 +41,13 @@ CREATE TABLE IF NOT EXISTS shipments (
    -- AUTO_INCREMENT was used in the primary key columns so that the value of the primary key is automatically incremented when a new row is inserted.
 
 
--- Insertar datos en tabla Stores
+-- Insert data into Stores table
 INSERT INTO stores (store_name, city) VALUES
 ('PalmaBike', 'Palma'),
 ('Jaume Bikes', 'IES Manacor'),
 ('Alcudia Bikes', 'Alcudia');
 
--- Insertar datos en tabla Bikes
+-- Insert data in Bikes table
 INSERT INTO bikes (bike_name, store_id, usage, brand) VALUES
 ('Bike 1', 1, 'mountain', 'ORBEA'),
 ('Bike 2', 1, 'mountain', 'CANYON'),
@@ -55,7 +55,7 @@ INSERT INTO bikes (bike_name, store_id, usage, brand) VALUES
 ('Bike 4', 3, 'urban', 'TRECK'),
 ('Bike 5', 3, 'urban', 'ORBEA');
 
--- Insertar datos en tabla Orders
+-- Insert data into Orders table
 INSERT INTO orders (bike_id, order_date) VALUES
 (1, '2022-01-01'),
 (2, '2022-02-01'),
@@ -63,7 +63,7 @@ INSERT INTO orders (bike_id, order_date) VALUES
 (4, '2022-04-01'),
 (5, '2022-05-01');
 
--- Insertar datos en tabla Shipments
+-- Insert data in Shipments table
 INSERT INTO shipments (order_id, shipment_date) VALUES
 (1, '2022-01-15'),
 (2, '2022-02-15'),
