@@ -1,3 +1,12 @@
+
+-- Create Stores table
+CREATE TABLE IF NOT EXISTS stores (
+  store_id INT(5) NOT NULL AUTO_INCREMENT,
+  store_name VARCHAR(50) NOT NULL UNIQUE KEY,
+  city VARCHAR(50) NOT NULL,
+  PRIMARY KEY (store_id)
+);
+
 -- Create Bikes table
 CREATE TABLE IF NOT EXISTS bikes (
   bike_id INT(20) NOT NULL AUTO_INCREMENT,
@@ -9,13 +18,6 @@ CREATE TABLE IF NOT EXISTS bikes (
   FOREIGN KEY (store_id) REFERENCES stores(store_id)
 );
 
--- Create Stores table
-CREATE TABLE IF NOT EXISTS stores (
-  store_id INT(5) NOT NULL AUTO_INCREMENT,
-  store_name VARCHAR(50) NOT NULL UNIQUE KEY,
-  city VARCHAR(50) NOT NULL,
-  PRIMARY KEY (store_id)
-);
 
 -- Create Orders table
 CREATE TABLE IF NOT EXISTS orders (
